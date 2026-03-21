@@ -1,34 +1,33 @@
-# Pseudocode planning (assessment key, must retain):
-# 1. Define base parameters: total class students (91), initial infected students, daily infection growth rate;
-# 2. Initialize loop variables: current infected students (equal to initial infected), days (starts at 0);
-# 3. Use while loop to calculate daily infected number with condition: current_infected < total students;
-# 4. Each loop: print daily infected number → calculate next day's infected number → increment days by 1;
-# 5. After loop termination, print total days to infect the whole class;
-# 6. Keep floating-point output (no forced integer conversion) and ensure code terminates normally.
+# Pseudocode:
+# 1. Set total_students = 91, initial_infected = 5, growth_rate = 0.4
+# 2. Initialize current_infected, days
+# 3. While current_infected < total_students:
+#    a. Print current day and infected count
+#    b. Update current_infected = current_infected * (1 + growth_rate)
+#    c. Increment days
+# 4. Print final results
 
-# 1. Define core parameters (meets practical requirement: 91 students in IBI1 class)
-TOTAL_STUDENTS = 91  # Fixed total number of students in the class
-initial_infected = 5  # Initial number of infected students (modifiable)
-daily_growth_rate = 0.4  # Daily infection growth rate (40%, converted to decimal)
+# Define core parameters
+TOTAL_STUDENTS = 91
+initial_infected = 5
+daily_growth_rate = 0.4  
 
-# 2. Initialize loop variables
+# Initialize loop variables
 current_infected = initial_infected
-days = 0  # Initial day count (Day 0 = initial infection state)
+days = 0  
 
-# 3. Print title for readability
+# Print title for readability
 print("=== IBI1 Class Infection Spread Simulation ===")
 print(f"Initial infected: {initial_infected} students")
 print(f"Daily growth rate: {daily_growth_rate * 100}%\n")
 
-# 4. While loop to calculate infection spread (core logic, ensures normal termination)
+# While loop to calculate infection spread
 while current_infected < TOTAL_STUDENTS:
     # Print daily infected number (1 decimal place, meets practical requirement)
     print(f"Day {days}: {current_infected:.1f} students infected")
-    # Calculate next day's infected number: current × (1 + daily growth rate)
     current_infected = current_infected * (1 + daily_growth_rate)
-    # Increment day count
     days += 1
 
-# 5. Print final results after loop termination (assessment key: total days output)
+# Print final results
 print(f"Day {days}: {current_infected:.1f} students infected (Whole class infected)")
 print(f"\nTotal days to infect all 91 students: {days} days")

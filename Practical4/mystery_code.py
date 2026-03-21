@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:This code generates 11 random integers between 1 and 10, calculates their cumulative sum, and prints it.
+# Answer: This code generates 11 random integers between 1 and 10, calculates their cumulative sum, and prints it.
 # Import libraries
 # randint allows drawing a random number,
 # e.g. randint(1,5) draws a number between 1 and 5
