@@ -1,6 +1,12 @@
 import matplotlib.pyplot as plt
 
-gene_expression = {'TP53': 8.2,'BRCA1': 10.1,'EGFR': 12.4,'KRAS': 7.8,'BRAF': 9.5}
+gene_expression = {
+    'TP53': 12.4,
+    'EGFR': 15.1,
+    'BRCA1': 8.2,
+    'PTEN': 5.3,
+    'ESR1': 10.7
+}
 
 gene_expression['MYC'] = 11.6
 
