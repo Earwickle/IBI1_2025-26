@@ -1,0 +1,10 @@
+Reflection
+
+This practical helped me learn the basics of Git and GitHub.
+I practiced initialising repositories, committing changes, branching, merging, and forking.
+I also built a simple personal website with GitHub Pages.
+
+The most challenging parts were using Git commands correctly and writing clear commit messages.
+I now understand why version control and good documentation matter for coding projects.
+
+Overall, this was a useful introduction to tools I will use in future work.
