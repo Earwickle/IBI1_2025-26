@@ -1,0 +1,9 @@
+This practical was interesting because it showed how random chance changes the outcome of a disease simulation.
+
+I implemented a stochastic SIR model in Python and saw that even with the same parameters, the infected peak and timing can vary when the model is run multiple times.
+
+I also extended the model to include vaccination. The infected curves for 0, 10, 20, ..., 100 percent vaccination show that increasing vaccination lowers the peak of infections and can prevent widespread outbreaks.
+
+Finally, I built a spatial SIR model on a 100x100 grid. This helped me understand how local neighbour-to-neighbour infection changes the dynamics compared to a well-mixed population. I enjoyed seeing the disease spread across the grid and then fade as infected cells recover.
+
+The most important thing I learned was how to encode a real-world problem as a probabilistic model and how random sampling affects the results.
