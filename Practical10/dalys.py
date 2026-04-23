@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-CSV_PATH = r"C:\Users\Joyce\Desktop\学习资料\ICMB\week 10\dalys-rate-from-all-causes.csv"
+CSV_PATH = r"C:\Users\Joyce\Desktop\学习资料\IBI\week 10\dalys-rate-from-all-causes.csv"
 
 if not os.path.exists(CSV_PATH):
     raise FileNotFoundError(f"CSV file not found: {CSV_PATH}")
