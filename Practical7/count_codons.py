@@ -145,18 +145,24 @@ def create_pie_chart(codon_counts, stop_codon, output_file):
     fig, ax = plt.subplots(figsize=(14, 10))
     
     # Create pie chart
-    wedges, texts, autotexts = ax.pie(counts, 
-                                       labels=labels, 
-                                       autopct='%1.2f%%',
-                                       colors=colors, 
-                                       startangle=90,
-                                       textprops={'fontsize': 12, 'weight': 'bold'})
+    pie_result = ax.pie(counts,
+                        labels=labels,
+                        autopct='%1.2f%%',
+                        colors=colors,
+                        startangle=90,
+                        textprops={'fontsize': 12, 'weight': 'bold'})
+
+    if len(pie_result) == 3:
+        wedges, texts, autotexts = pie_result
+    else:
+        wedges, texts = pie_result
+        autotexts = []
     
     # Format percentage text
     for autotext in autotexts:
         autotext.set_color('white')
         autotext.set_fontsize(11)
-        autotext.set_weight('bold')
+        autotext.set_fontweight('bold')
     
     # Add title
     ax.set_title(f'Codon Distribution in Genes with Stop Codon {stop_codon}\n'

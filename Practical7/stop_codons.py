@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 def parse_fasta(filename):
     """Parse a FASTA file and yield gene name, sequence tuples."""
     with open(filename, 'r') as f:
@@ -52,8 +55,9 @@ def find_stop_codons_in_frame(sequence):
 
 
 def main():
-    input_file = 'Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa'
-    output_file = 'stop_genes.fa'
+    script_dir = Path(__file__).resolve().parent
+    input_file = script_dir / 'Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa'
+    output_file = script_dir / 'stop_genes.fa'
     
     genes_with_stops = []
     
