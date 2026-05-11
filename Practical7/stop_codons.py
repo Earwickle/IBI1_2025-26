@@ -30,28 +30,28 @@ def find_stop_codons_in_frame(sequence):
     """
     Find in-frame stop codons in a sequence.
     In-frame means the stop codon is part of the same reading frame as ATG.
-    Returns a sorted list of stop codons found, or None if no ATG or no stops found.
+    Returns a sorted list of stop codons found (across all ORFs starting at any ATG),
+    or None if no ATG or no in-frame stops found.
     """
     stop_codons = {'TAA', 'TAG', 'TGA'}
+    seq = sequence.upper()
     found_stops = set()
-    
-    # Find ATG (start codon)
-    atg_index = sequence.find('ATG')
-    
-    if atg_index == -1:
-        # No start codon found
-        return None
-    
-    # Look for stop codons in-frame from the ATG
-    # Starting from ATG, read codons in frame (every 3 nucleotides)
-    i = atg_index
-    while i + 3 <= len(sequence):
-        codon = sequence[i:i+3]
-        if codon in stop_codons:
-            found_stops.add(codon)
-        i += 3
-    
-    return sorted(list(found_stops)) if found_stops else None
+
+    seq_len = len(seq)
+    # Scan for every ATG and follow that ORF in-frame (step by 3)
+    for atg_index in range(0, seq_len - 2):
+        if seq[atg_index:atg_index + 3] != 'ATG':
+            continue
+
+        j = atg_index + 3
+        while j + 3 <= seq_len:
+            codon = seq[j:j + 3]
+            if codon in stop_codons:
+                found_stops.add(codon)
+                break  # stop for this ORF (first in-frame stop)
+            j += 3
+
+    return sorted(found_stops) if found_stops else None
 
 
 def main():
