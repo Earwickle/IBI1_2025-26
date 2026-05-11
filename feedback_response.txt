@@ -1,0 +1,49 @@
+Dear markers,
+
+I'm writing to share my responses to the formative feedback I received for Practicals in Weeks 3–5 of IBI1_2025-26.
+Thank you for the detailed and constructive comments, they helped me a lot. 
+
+Below I outline the changes I made in response to each piece of feedback.
+
+
+Week 3 Feedback Responses
+
+Feedback 1: "Commit messages for Week 3 are informative" (Score: 2/3)
+Response:
+I used "git rebase -i" to rewrite the commit history, replacing vague commit messages with clear, descriptive ones that explain the purpose of each change.
+Examples include:
+"edit" → "update Introductions.txt with personal information"
+"commit version 1" → "Update name in GitHub Pages index.md"
+...
+This ensures my version history is readable, professional, and useful for future collaboration or debugging.
+
+Feedback 2: "There isn't a file called Reflection.txt." (Score: 0/1)
+Feedback 3: "It contains reflections..." (Score: 0/1)
+Response:
+I'm sorry because I forgot to create Reflection.txt before.
+But I have now created Reflection.txt in the Week 3 folder with a concise reflection on my learning experience.
+The file includes:
+1. Skills practiced like initialising repos, committing, branching, merging, forking
+2. Experience building a personal website with GitHub Pages
+3. Challenges encountered and lessons learned about version control
+
+
+Week 4 Feedback Responses
+
+Thank you for the positive feedback. This Part I scored 100% so no changes were needed. 
+Everything was fine:)
+
+
+Week 5 Feedback Responses
+
+Feedback 1: "The dictionary does not match the given input values." (Score: 1/2)
+Response:
+I reviewed the gene expression script and corrected the dictionary definition to exactly match the input values specified in the practical instructions.
+
+
+All changes have been pushed to the repo.
+Appreciate again for the time taken to provide this feedback.
+It has helped me a lot to develop better habits in version control, code documentation, and responsive iteration—skills I will carry forward in future projects.
+
+Best wishes,
+Earwickle
