@@ -1,21 +1,21 @@
 #Track daily nutritional intake
 
-class FoodItem:
+class food_item:
     #Class to represent a food item with nutritional information.
     
-    def __init__(self, name, calories, protein, carbs, fat):
+    def __init__(self, name, calories, protein, carbohydrates, fat):
         """
         Initialize a FoodItem instance.
         :param name: Name of the food (string)
         :param calories: Calorie content (kcal, float/int)
         :param protein: Protein content (grams, float/int)
-        :param carbs: Carbohydrate content (grams, float/int)
+        :param carbohydrates: Carbohydrate content (grams, float/int)
         :param fat: Fat content (grams, float/int)
         """
         self.name = name
         self.calories = calories
         self.protein = protein
-        self.carbs = carbs
+        self.carbohydrates = carbohydrates
         self.fat = fat
 
 
@@ -28,21 +28,21 @@ def calculate_daily_nutrition(food_list):
     # Initialize total values
     total_calories = 0
     total_protein = 0
-    total_carbs = 0
+    total_carbohydrates = 0
     total_fat = 0
 
     # Sum nutrition from all food items
     for food in food_list:
         total_calories += food.calories
         total_protein += food.protein
-        total_carbs += food.carbs
+        total_carbohydrates += food.carbohydrates
         total_fat += food.fat
 
     # Display total nutrition results
     print("=== 24-Hour Nutritional Intake Summary ===")
     print(f"Total Calories: {total_calories:.2f} kcal")
     print(f"Total Protein: {total_protein:.2f} g")
-    print(f"Total Carbohydrates: {total_carbs:.2f} g")
+    print(f"Total Carbohydrates: {total_carbohydrates:.2f} g")
     print(f"Total Fat: {total_fat:.2f} g")
 
     # Warning conditions
@@ -58,10 +58,10 @@ def calculate_daily_nutrition(food_list):
 # Example usage (required by the assignment)
 if __name__ == "__main__":
     # Create food items
-    apple = FoodItem("Apple", 60, 0.3, 15, 0.5)
-    chicken = FoodItem("Grilled Chicken", 250, 30, 0, 5)
-    rice = FoodItem("Cooked Rice", 130, 2.7, 28, 0.3)
-    avocado = FoodItem("Avocado", 160, 2, 9, 15)
+    apple = food_item("Apple", 60, 0.3, 15, 0.5)
+    chicken = food_item("Grilled Chicken", 250, 30, 0, 5)
+    rice = food_item("Cooked Rice", 130, 2.7, 28, 0.3)
+    avocado = food_item("Avocado", 160, 2, 9, 15)
 
     # 24-hour food intake list
     daily_food = [apple, chicken, rice, avocado]
