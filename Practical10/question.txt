@@ -1,7 +1,7 @@
 Question:
 Plot a DALYs boxplot for China, and calculate the range between its maximum and minimum DALYs values.
 
-Addressed in dalys.py at line 93.
+Addressed in dalys.py at line 77.
 
 Result discussion:
 The DALYs for China show a maximum of 41104.86 and a minimum of 22270.51, with a range of 18834.35. 
