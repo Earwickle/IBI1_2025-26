@@ -55,7 +55,7 @@ def calculate_daily_nutrition(food_list):
         print("No warnings - Nutrition intake is within recommended limits.")
 
 
-# Example usage (required by the assignment)
+# Example usage
 if __name__ == "__main__":
     # Create food items
     apple = food_item("Apple", 60, 0.3, 15, 0.5)
