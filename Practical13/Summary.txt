@@ -1,0 +1,20 @@
+1. Basic Information of Human DLX5 Protein
+The human DLX5 protein (UniProt ID: P56178) consists of 289 amino acids. 
+As a homeobox transcription factor, it is localised in the nucleus, where it regulates gene expression related to vertebrate development.
+
+2. Online BLAST Alignment Results
+A BLAST search restricted to Eutheria retrieved 250 homologous sequences from UniProtKB. 
+The percentage identities of these hits range from 84.5% to 100%. 
+The highest conservation is observed in primate homologues, with bonobo and chimpanzee sequences sharing 100% identity with human DLX5. 
+The mouse DLX5 protein (UniProt ID: P70396), selected for further analysis, shows high similarity to the human sequence.
+
+3. Python Ungapped Global Alignment Results
+Three pairwise alignments were performed using the BLOSUM62 matrix:
+Human DLX5 vs. Mouse DLX5: Alignment score = 1490; Percentage identity = 96.54%
+Human DLX5 vs. Random sequence: Alignment score = -239; Percentage identity = 7.61%
+Mouse DLX5 vs. Random sequence: Alignment score = -239; Percentage identity = 7.61%
+
+4. Conclusion
+The human and mouse DLX5 sequences are the most closely related pair analysed, exhibiting high sequence identity (96.54%) and a strongly positive alignment score. 
+In contrast, comparisons with a random sequence yield low identity (~7.6%) and negative scores, consistent with unrelated sequences. 
+The high conservation of DLX5 across mammals, as shown by both BLAST and Python analysis, reflects its essential biological function in vertebrate development.
